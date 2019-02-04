@@ -5,13 +5,13 @@ using UnityEngine;
 public class BallSpawner : MonoBehaviour {
 
 	public Transform model;
-	public float rate = 1.0f;
+	public float rate = 1.0f; //ball spawner rate of entry 
 
 	float progress = 0.0f;
 
 	void Spawn()
 	{
-		Transform next = Instantiate(model, transform.position, transform.rotation) as Transform;
+		Transform next = Instantiate(model, transform.position, transform.rotation) as Transform; 
 		next.parent = transform;
 		next.localPosition = Vector3.zero;
 	}
